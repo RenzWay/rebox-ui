@@ -1,0 +1,130 @@
+@import "tailwindcss";
+@import "./ui";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon:hover {
+  transform: rotate(30deg);
+  transition: all 0.256s ease-in-out;
+}
+
+nav {
+  a {
+    @apply no-underline text-slate-300 hover:text-slate-100 font-bold;
+  }
+}
+
+@layer base {
+  /* ===== BODY TEXT ===== */
+  body {
+    @apply text-base text-slate-200 antialiased;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  span {
+    @apply text-base;
+  }
+
+  small {
+    @apply text-sm text-slate-400;
+  }
+
+  /* ===== HEADINGS ===== */
+  h1 {
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold leading-tight tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-medium leading-snug;
+  }
+
+  h5 {
+    @apply text-lg font-medium leading-snug;
+  }
+
+  h6 {
+    @apply text-base font-medium uppercase tracking-wide text-slate-400;
+  }
+
+  /* ===== INLINE TEXT ===== */
+  strong {
+    @apply font-semibold;
+  }
+
+  em {
+    @apply italic;
+  }
+
+  a {
+    @apply text-blue-400 hover:text-blue-300 underline underline-offset-4;
+  }
+}
+
+/* CODE TABS TEST JUST FOR TESTING PURPOSES */
+
+.code-wrapper {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: auto;
+  background: #0d1117;
+  
+  min-width: 300px;
+  max-width: 100%;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tabs button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: transparent;
+  color: #9ca3af;
+  border: none;
+  cursor: pointer;
+}
+
+.tabs button[data-active="true"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.tabs .copy {
+  margin-left: auto;
+  color: #93c5fd;
+}
+
+.code {
+  font-size: 14px;
+}
+
+
