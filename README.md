@@ -1,73 +1,126 @@
-# React + TypeScript + Vite
+# Rebox UI - React Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <img src="public/rebox.png" alt="Rebox Logo" width="80" height="80">
+  <h3>React components styled with plain CSS — not utility-locked</h3>
+  <p>Copy and paste ready React UI components styled with plain CSS. No dependencies, no setup — just copy and use.</p>
+</div>
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🚀 No Dependencies** - Zero external dependencies required
+- **🎨 Plain CSS Styling** - Styled with readable CSS, not utility classes
+- **📋 Copy & Paste Ready** - Just copy the code and use in your project
+- **⚡ Fast & Lightweight** - Minimal footprint, maximum performance
+- **🔧 Fully Customizable** - Easy to modify and extend
+- **📱 Responsive Design** - Works on all screen sizes
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+1. **Browse Components** - Visit the Rebox web interface
+2. **Copy Code** - Select and copy the component code
+3. **Paste & Customize** - Add to your project and style as needed
+4. **No Installation** - No npm packages or build tools required
 
-## Expanding the ESLint configuration
+## 📦 Available Components
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Component | Variants | Description |
+|-----------|----------|--------------|
+| **Button** | 5 variants | Primary, Secondary, Outline, Link, Danger buttons |
+| **Badge** | 2 variants | Small labels for status and categories |
+| **Card** | 3 variants | Flexible containers for grouping content |
+| **Tooltip** | 1 variant | Hover information pop-ups |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 💻 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React 19** - Latest React with modern features
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **React Icons** - Beautiful icon library
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🎨 Styling Philosophy
+
+Rebox components use **plain CSS** instead of utility classes, making them:
+
+- **Readable** - Clear, semantic class names
+- **Maintainable** - Easy to understand and modify
+- **Flexible** - Not locked into any CSS framework
+- **Customizable** - Simple to override and extend
+
+### Example Button Component
+
+```tsx
+// React Component
+<button className="btn btn-primary">Primary Button</button>
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```css
+/* Plain CSS Styling */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+  font-weight: bold;
+}
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+.btn-primary:hover {
+  background-color: #2563eb;
+}
 ```
+
+## 🛠️ Development
+
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to project
+cd rebox
+
+# Install dependencies
+bun install
+
+# Start development server
+bun run dev
+
+# Build for production
+bun run build
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── codeTabs.tsx    # Code display component
+│   ├── navbar.tsx      # Navigation component
+│   └── footer.tsx      # Footer component
+├── views/              # Page components
+│   └── content/        # Component showcase pages
+├── model/              # Component data and configurations
+├── interface/          # TypeScript interfaces
+├── style/              # CSS stylesheets
+└── assets/             # Static assets
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+Apache License 2.0
+
+---
+
+<div align="center">
+  <p>Made with ❤️ for the React community</p>
+  <p>Simple. Customizable. Readable.</p>
+</div>
