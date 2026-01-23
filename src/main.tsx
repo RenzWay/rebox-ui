@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 import "./style/index.css";
 import App from "./App.tsx";
 import { Navbar } from "./components/navbar.tsx";
@@ -19,14 +20,16 @@ const rute = [
 
 export function Routers() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        {rute.map((route, index) => (
-          <Route key={index} path={route.path} element={route.element} />
-        ))}
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          {rute.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

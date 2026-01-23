@@ -2,7 +2,7 @@ import type { JSX } from "react/jsx-runtime";
 
 //** Interface for codetabs ButtonComponent */
 export interface CodeBlock {
-  label: "React" | "CSS (Variables)" | "CSS (Plain)";
+  label: "React" | "CSS (Variables)" | "CSS (Plain)" | "CSS";
   language: "tsx" | "css";
   code: string;
 }

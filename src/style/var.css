@@ -1,0 +1,54 @@
+:root {
+  /* Width */
+  --w-max-sm: 24rem;
+  --w-max-md: 28rem;
+  --w-max-lg: 32rem;
+  --w-max-xl: 36rem;
+  --w-max-2xl: 42rem;
+
+  /* Padding */
+  --p-1: 0.25rem;
+  --p-2: 0.5rem;
+  --p-3: 0.75rem;
+  --p-4: 1rem;
+  --p-5: 1.25rem;
+  --p-6: 1.5rem;
+
+  /* Margin */
+  --m-1: 0.25rem;
+  --m-2: 0.5rem;
+  --m-3: 0.75rem;
+  --m-4: 1rem;
+  --m-5: 1.25rem;
+  --m-6: 1.5rem;
+
+  /* Border Radius */
+  --rounded-sm: 0.125rem;
+  --rounded: 0.25rem;
+  --rounded-md: 0.375rem;
+  --rounded-lg: 0.5rem;
+  --rounded-xl: 0.75rem;
+  --rounded-2xl: 1rem;
+  --rounded-full: 9999px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Font Size */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+
+  /* Flex */
+  --flex-1: 1 1 0%;
+  --flex-auto: 1 1 auto;
+  --flex-initial: 0 1 auto;
+  --flex-none: none;
+}

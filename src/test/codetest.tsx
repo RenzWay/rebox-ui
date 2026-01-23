@@ -6,7 +6,11 @@ export default function CodeTabs() {
   const [html, setHtml] = useState({ react: "", css: "" });
 
   const reactCode = `export default function Button() {
-  return <button className="btn btn-primary">Click</button>;
+  return (
+    <button className="btn btn-primary">
+      Click
+    </button>
+  );
 }`;
 
   const cssCode = `.btn {
@@ -19,10 +23,10 @@ export default function CodeTabs() {
 .btn-primary {
   background-color: var(--color-blue-500);
   color: white;
+}
 
-  &:hover {
-    background-color: var(--color-blue-600);
-  }
+.btn-primary:hover {
+  background-color: var(--color-blue-600);
 }`;
 
   useEffect(() => {
@@ -53,27 +57,21 @@ export default function CodeTabs() {
 
   return (
     <div className="code-wrapper">
-      {/* tabs */}
       <div className="tabs">
         <button
-          className="btn-primary"
           onClick={() => setActive("react")}
           data-active={active === "react"}>
           React
         </button>
-        <button
-          className="btn-primary"
-          onClick={() => setActive("css")}
+        <button 
+          onClick={() => setActive("css")} 
           data-active={active === "css"}>
           CSS
         </button>
-
-        <button className="copy btn-primary" onClick={copy}>
+        <button className="copy" onClick={copy}>
           Copy
         </button>
       </div>
-
-      {/* code */}
       <div
         className="code"
         dangerouslySetInnerHTML={{

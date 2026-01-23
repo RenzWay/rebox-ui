@@ -6,6 +6,7 @@ import { Footer } from "./components/footer";
 import { Link } from "react-router-dom";
 import modelComponent from "./model/modelComponent";
 import { Badge } from "./components/assets/badge";
+import { useTheme } from "./context/useTheme";
 
 const headerItemDesc = [
   {
@@ -23,42 +24,47 @@ const headerItemDesc = [
 ];
 
 export default function App() {
+  const { theme } = useTheme();
+
   return (
     <>
-      {/* HERO SECTION */}
-      <header className="relative min-h-screen overflow-hidden bg-[#0b0f1a]">
-        {/* neon background */}
+      <header className={`relative min-h-screen overflow-hidden ${theme === 'light' ? 'bg-gradient-to-br from-blue-50 to-indigo-100' : 'bg-[#0b0f1a]'}`}>
+        {/* Animated bubbles for both themes */}
         <div
-          className="
+          className={`
           absolute z-0
           w-75 sm:w-100 md:w-125
           h-75 sm:h-100 md:h-125
-          rounded-full opacity-70 blur-[140px]
+          rounded-full blur-[140px]
           animate-[float_18s_ease-in-out_infinite]
-          bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.9),transparent_65%)]
           -top-32 -left-24
-        "
+          ${theme === 'light' 
+            ? 'opacity-30 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.6),transparent_65%)]'
+            : 'opacity-70 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.9),transparent_65%)]'
+          }
+        `}
         />
 
         <div
-          className="
+          className={`
           absolute z-0
           w-75 sm:w-100 md:w-125
           h-75 sm:h-100 md:h-125
-          rounded-full opacity-70 blur-[140px]
+          rounded-full blur-[140px]
           animate-[float_22s_ease-in-out_infinite]
-          bg-[radial-gradient(circle_at_70%_70%,rgba(147,51,234,0.9),transparent_65%)]
           -bottom-32 -right-28
-        "
+          ${theme === 'light'
+            ? 'opacity-25 bg-[radial-gradient(circle_at_70%_70%,rgba(147,51,234,0.5),transparent_65%)]'
+            : 'opacity-70 bg-[radial-gradient(circle_at_70%_70%,rgba(147,51,234,0.9),transparent_65%)]'
+          }
+        `}
         />
 
-        {/* glass overlay */}
-        <div className="absolute inset-0 z-10 backdrop-blur-md bg-white/5" />
+        <div className={`absolute inset-0 z-10 backdrop-blur-md ${theme === 'light' ? 'bg-white/20' : 'bg-white/5'}`} />
 
-        {/* CONTENT HEADER */}
         <div className="relative z-20 flex flex-col gap-4 min-h-screen items-center justify-center px-4 sm:px-6 md:px-8">
           <div className="flex items-center">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl text-white text-center">
+            <h1 className={`text-4xl sm:text-5xl md:text-7xl text-center ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
               <img
                 src="/rebox.png"
                 alt="Logo"
@@ -68,13 +74,13 @@ export default function App() {
               <span className="text-sky-400 text-6xl font-bold">I</span>
             </h1>
           </div>
-          <h4 className="text-base sm:text-lg md:text-xl text-center">
+          <h4 className={`text-base sm:text-lg md:text-xl text-center ${theme === 'light' ? 'text-gray-700' : 'text-white'}`}>
             React components styled with plain{" "}
             <span className="text-blue-400 font-bold">CSS</span> — not
             utility-locked.
           </h4>
 
-          <p className="mt-4 text-gray-500 text-sm sm:text-base md:text-lg font-bold text-center max-w-2xl mx-auto">
+          <p className={`mt-4 text-sm sm:text-base md:text-lg font-bold text-center max-w-2xl mx-auto ${theme === 'light' ? 'text-gray-600' : 'text-gray-500'}`}>
             Copy and paste ready <span className="text-sky-500">React UI</span>{" "}
             components styled with plain{" "}
             <span className="text-blue-400">CSS</span>.
@@ -86,7 +92,7 @@ export default function App() {
             {headerItemDesc.map((item, index) => (
               <li
                 key={index}
-                className="flex items-center gap-2 text-sm sm:text-base whitespace-nowrap">
+                className={`flex items-center gap-2 text-sm sm:text-base whitespace-nowrap ${theme === 'light' ? 'text-gray-700' : 'text-white'}`}>
                 <span className="text-blue-400 text-lg sm:text-xl">
                   {item.icon}
                 </span>
@@ -95,16 +101,15 @@ export default function App() {
             ))}
           </ul>
 
-          {/* BUTTON PARENT AND ELEMENT FROM HEADER */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Link to="/components" className="no-underline text-white">
+            <Link to="/components" className={`no-underline ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
               <button className="btn btn-primary w-full sm:w-auto px-6 py-2">
                 Get Started
               </button>
             </Link>
 
             <a
-              className="no-underline text-white"
+              className={`no-underline ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}
               href="https://github.com"
               target="_blank"
               rel="noreferrer">
@@ -116,38 +121,34 @@ export default function App() {
         </div>
       </header>
 
-      {/* BODY MAIN CONTENT HOME PAGE */}
       <main>
-        {/* SECTION ONE (1) */}
-        <section className="py-28 px-4 sm:px-6 lg:px-10 bg-linear-to-tr from-gray-800 via-slate-900 to-gray-950">
+        <section className={`py-28 px-4 sm:px-6 lg:px-10 ${theme === 'light' ? 'bg-gradient-to-tr from-gray-50 to-blue-50' : 'bg-gradient-to-tr from-gray-800 via-slate-900 to-gray-950'}`}>
           <header className="text-center">
-            <h3 className="font-bold text-xl sm:text-2xl">
+            <h3 className={`font-bold text-xl sm:text-2xl ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
               Simple. Customize.{" "}
               <span className="text-blue-600 text-2xl sm:text-3xl">
                 Readable.
               </span>
             </h3>
-            <p className="mt-2 text-sm sm:text-base text-gray-500 font-bold">
+            <p className={`mt-2 text-sm sm:text-base font-bold ${theme === 'light' ? 'text-gray-600' : 'text-gray-500'}`}>
               write css as it should be. and customize it yourself
             </p>
           </header>
 
-          <section className="bg-gray-900 border border-blue-900/40 w-fit p-10 mx-auto rounded-xl mt-8 flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-10">
+          <section className={`w-fit p-1 sm:p-10 mx-auto rounded-xl mt-8 flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-10 border ${theme === 'light' ? 'bg-white border-blue-200' : 'bg-gray-900 border-blue-900/40'}`}>
             <CodeTabs />
-
             <div className="flex items-center">
               <button className="btn btn-outline">Click me!</button>
             </div>
           </section>
         </section>
 
-        {/* SECTION TWO (2) */}
-        <section className="bg-linear-to-bl from-indigo-950/55 via-cyan-950/65 to-sky-950/60 border-t border-t-gray-400">
+        <section className={`border-t ${theme === 'light' ? 'bg-gradient-to-bl from-blue-50 to-indigo-50 border-gray-200' : 'bg-gradient-to-bl from-indigo-950/55 via-cyan-950/65 to-sky-950/60 border-t-gray-400'}`}>
           <header className="text-center mt-10 py-10 px-4 sm:px-6 lg:px-10">
-            <h2 className="text-4xl font-bold">
+            <h2 className={`text-4xl font-bold ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
               Search <span className="text-blue-500 text-4xl">Components</span>
             </h2>
-            <p>
+            <p className={theme === 'light' ? 'text-gray-600' : 'text-gray-300'}>
               A growing collection of components, ready to use and easy to
               customize.
             </p>
@@ -156,12 +157,12 @@ export default function App() {
             {modelComponent.map((component, index) => (
               <li
                 key={index}
-                className="bg-gray-900 border border-blue-900/40 rounded-lg p-4 hover:scale-105 transition-transform">
+                className={`rounded-lg p-4 hover:scale-105 transition-transform border ${theme === 'light' ? 'bg-white border-blue-200' : 'bg-gray-900 border-blue-900/40'}`}>
                 <div className="flex justify-between">
-                  <h3 className="font-bold text-lg">{component.title}</h3>
-                  <Badge text={component.badge} />
+                  <h3 className={`font-bold text-lg ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>{component.title}</h3>
+                  <Badge variant="danger" text={component.badge} />
                 </div>
-                <p className="text-sm text-gray-500 mt-2">{component.decs}</p>
+                <p className={`text-sm mt-2 ${theme === 'light' ? 'text-gray-600' : 'text-gray-500'}`}>{component.decs}</p>
 
                 <Link className="btn btn-link" to={`/components`}>
                   <button className="mt-10 mb-4 underline">

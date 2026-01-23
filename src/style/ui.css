@@ -1,4 +1,39 @@
 @import "./color.css";
+@import "./ui2.css";
+@import "./var.css";
+
+/* =========================
+   THEME TOGGLE BUTTON
+   ========================= */
+.theme-toggle {
+  padding: 8px;
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  transform: scale(1.05);
+}
+
+/* =========================
+   GLOBAL THEME STYLES
+   ========================= */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
 
 /* BUTTON STYLE */
 .btn {
@@ -6,65 +41,72 @@
   border-radius: 0.375rem;
   transition: all 0.2s ease-in-out;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary {
-  background-color: var(--color-blue-500);
+  background-color: var(--blue-500);
   color: white;
+}
 
-  &:hover {
-    background-color: var(--color-blue-600);
-  }
+.btn-primary:hover {
+  background-color: var(--blue-600);
 }
 
 .btn-secondary {
-  background-color: #374151;
-  color: white;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+}
 
-  &:hover {
-    background-color: #1f2937;
-  }
+.btn-secondary:hover {
+  background-color: var(--bg-secondary);
 }
 
 .btn-outline {
-  background: rgba(23, 37, 84, 0.3);
-  border: 1px solid var(--color-blue-600);
-  color: var(--color-blue-800);
+  background: transparent;
+  border: 1px solid var(--blue-500);
+  color: var(--blue-500);
+}
 
-  &:hover {
-    background: var(--color-blue-500);
-    color: white;
-  }
+.btn-outline:hover {
+  background: var(--blue-500);
+  color: white;
 }
 
 .btn-link {
-  text-decoration: underline !important;
-  color: var(--color-blue-600);
+  background: transparent;
+  text-decoration: underline;
+  color: var(--blue-500);
+  border: none;
+  padding: 0.5rem 1rem;
+}
 
-  &:hover {
-    color: var(--color-blue-800);
-  }
+.btn-link:hover {
+  color: var(--blue-600);
 }
 
 .btn-danger {
-  background-color: var(--color-red-500);
+  background-color: var(--red-500);
   color: white;
+}
 
-  &:hover {
-    background-color: var(--color-red-600);
-  }
+.btn-danger:hover {
+  background-color: var(--red-600);
 }
 
 .btn-github {
-  background-color: #1f2937;
+  background-color: var(--gray-800);
+  color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   transition: all 0.2s ease-in-out;
   font-weight: bold;
+}
 
-  &:hover {
-    background-color: rgb(12, 17, 23);
-  }
+.btn-github:hover {
+  background-color: var(--gray-900);
 }
 
 /* BADGE STYLE */
@@ -72,46 +114,68 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  min-width: 2.2rem;
-  height: 2.2rem;
-  padding: 0 0.75rem;
-
+  min-width: 1.9rem;
+  height: 1.9rem;
+  padding: 0 0.6rem;
   white-space: nowrap;
   text-align: center;
-
   border-radius: 9999px;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 500;
+  cursor: default;
 }
 
-/* DEFAULT BADGE */
 .badge-primary {
   background-color: rgba(59, 130, 246, 0.18);
   border: 1.5px solid rgba(59, 130, 246, 0.4);
-  color: #3b82f6;
+  color: var(--blue-500);
 }
 
 .badge-success {
   background-color: rgba(34, 197, 94, 0.18);
   border: 1.5px solid rgba(34, 197, 94, 0.4);
-  color: #22c55e;
+  color: var(--green-500);
 }
 
 .badge-warning {
   background-color: rgba(234, 179, 8, 0.18);
   border: 1.5px solid rgba(234, 179, 8, 0.4);
-  color: #eab308;
+  color: var(--yellow-500);
 }
 
 .badge-danger {
   background-color: rgba(239, 68, 68, 0.18);
   border: 1.5px solid rgba(239, 68, 68, 0.4);
-  color: #ef4444;
+  color: var(--red-500);
 }
 
 .badge-info {
   background-color: rgba(14, 165, 233, 0.18);
   border: 1.5px solid rgba(14, 165, 233, 0.4);
-  color: #0ea5e9;
+  color: var(--sky-500);
+}
+
+.badge-pulse {
+  position: relative;
+}
+
+.badge-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid currentColor;
+  opacity: 0.6;
+  animation: badge-pulse 1.6s ease-out infinite;
+}
+
+@keyframes badge-pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
 }
