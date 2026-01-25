@@ -25,6 +25,17 @@ export const badgeComponentsCode: CodeTabsProps[] = [
             `,
       },
       {
+        label: "React (JSX)",
+        language: "jsx",
+        code: `
+<span className="badge badge-primary">Primary</span>
+<span className="badge badge-success">Success</span>
+<span className="badge badge-danger">Danger</span>
+<span className="badge badge-warning">Warning</span>
+<span className="badge badge-info">Info</span>
+            `,
+      },
+      {
         label: "CSS",
         language: "css",
         code: `
@@ -90,6 +101,11 @@ export const badgeComponentsCode: CodeTabsProps[] = [
       {
         label: "React",
         language: "tsx",
+        code: `<span className="badge badge-info badge-pulse">Info</span>`,
+      },
+      {
+        label: "React (JSX)",
+        language: "jsx",
         code: `<span className="badge badge-info badge-pulse">Info</span>`,
       },
       {

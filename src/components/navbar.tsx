@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaHome } from "react-icons/fa";
 import { IoLogoDropbox } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
@@ -19,8 +19,16 @@ export function Navbar() {
         </h3>
       </Link>
       <ul>
-        <li className="group cursor-pointer">
-          <Link className="flex items-center" to="/components">
+        <li className="flex gap-1 cursor-pointer">
+          <Link className="flex items-center group" to={"/"}>
+            <FaHome size={25} className="mr-2 mt-1"/>
+             <p
+              className="opacity-0 -translate-x-3 transition-all duration-300 ease-out 
+                 group-hover:opacity-100 group-hover:translate-x-0 flex items-center">
+              Home
+            </p>
+          </Link>
+          <Link className="flex items-center group" to="/components">
             <IoLogoDropbox size={30} className="mr-2 mt-1" />
             <p
               className="opacity-0 -translate-x-3 transition-all duration-300 ease-out 

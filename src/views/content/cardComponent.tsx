@@ -21,22 +21,7 @@ export default function CardComponent() {
             element={card.element}
             codes={card.codes}></CodeTabs>
         ))}
-        <SimpleCard />
       </div>
     </>
-  );
-}
-
-function SimpleCard({ title }: { title?: string }) {
-  return (
-    <div className="card">
-      <img className="card-img" src="/download.jpg" alt="" />
-      <h3>{title || "Title"}</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero
-        nostrum quia animi quidem eos nihil optio excepturi minus ipsam sunt
-        nisi quaerat temporibus, quasi quisquam harum? Animi, a necessitatibus!
-      </p>
-    </div>
   );
 }

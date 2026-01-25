@@ -11,6 +11,11 @@ export const buttonComponentsCode: CodeTabsProps[] = [
         code: `<button className="btn btn-primary">Primary Button</button>`,
       },
       {
+        label: "React (JSX)",
+        language: "jsx",
+        code: `<button className="btn btn-primary">Primary Button</button>`,
+      },
+      {
         label: "CSS (Variables)",
         language: "css",
         code: `.btn {
@@ -60,6 +65,11 @@ export const buttonComponentsCode: CodeTabsProps[] = [
         code: `<button className="btn btn-secondary">Secondary Button</button>`,
       },
       {
+        label: "React (JSX)",
+        language: "jsx",
+        code: `<button className="btn btn-secondary">Secondary Button</button>`,
+      },
+      {
         label: "CSS (Variables)",
         language: "css",
         code: `.btn {
@@ -106,6 +116,11 @@ export const buttonComponentsCode: CodeTabsProps[] = [
       {
         label: "React",
         language: "tsx",
+        code: `<button className="btn btn-outline">Outline Button</button>`,
+      },
+      {
+        label: "React (JSX)",
+        language: "jsx",
         code: `<button className="btn btn-outline">Outline Button</button>`,
       },
       {
@@ -162,6 +177,11 @@ export const buttonComponentsCode: CodeTabsProps[] = [
         code: `<button className="btn btn-link">Link Button</button>`,
       },
       {
+        label: "React (JSX)",
+        language: "jsx",
+        code: `<button className="btn btn-link">Link Button</button>`,
+      },
+      {
         label: "CSS (Variables)",
         language: "css",
         code: `.btn {
@@ -208,6 +228,11 @@ export const buttonComponentsCode: CodeTabsProps[] = [
       {
         label: "React",
         language: "tsx",
+        code: `<button className="btn btn-danger">Danger</button>`,
+      },
+      {
+        label: "React (JSX)",
+        language: "jsx",
         code: `<button className="btn btn-danger">Danger</button>`,
       },
       {

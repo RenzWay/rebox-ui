@@ -4,6 +4,8 @@ import { ButtonComponent } from "./content/buttonComponent";
 import BadgeComponent from "./content/badgeComponent";
 import CardComponent from "./content/cardComponent";
 import { useTheme } from "@/context/useTheme";
+import ModalComponent from "./content/modalComponent";
+import TooltipComponent from "./content/tooltipComponent";
 
 const sidebarItems = [
   "Introduction",
@@ -16,7 +18,8 @@ const sidebarItems = [
 ];
 
 export default function ComponentsPage() {
-  const [activeComponent, setActiveComponent] = useState<string>("Button");
+  const [activeComponent, setActiveComponent] =
+    useState<string>("Introduction");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { theme } = useTheme();
 
@@ -27,19 +30,23 @@ export default function ComponentsPage() {
 
   return (
     <>
-      <main className={`min-h-screen ${theme === 'light' ? 'bg-white text-gray-900' : 'bg-gray-950 text-gray-100'}`}>
-        <header className={`px-4 sm:px-8 py-6 mb-8 border-b ${theme === 'light' ? 'border-gray-200' : 'border-gray-800'}`}>
+      <main
+        className={`min-h-screen ${theme === "light" ? "bg-white text-gray-900" : "bg-gray-950 text-gray-100"}`}>
+        <header
+          className={`px-4 sm:px-8 py-6 mb-8 border-b ${theme === "light" ? "border-gray-200" : "border-gray-800"}`}>
           <div className="flex items-center justify-between">
             <div>
-              <h2 className={`flex gap-1 items-center font-bold ${theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>
+              <h2
+                className={`flex gap-1 items-center font-bold ${theme === "light" ? "text-gray-900" : "text-gray-100"}`}>
                 <LuComponent /> Components
               </h2>
-              <p className={`text-sm sm:text-base ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
+              <p
+                className={`text-sm sm:text-base ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}>
                 A collection of reusable UI elements
               </p>
             </div>
             <button
-              className={`lg:hidden p-2 rounded-md ${theme === 'light' ? 'bg-gray-100 hover:bg-gray-200 text-gray-900' : 'bg-gray-800 hover:bg-gray-700 text-gray-100'}`}
+              className={`lg:hidden p-2 rounded-md ${theme === "light" ? "bg-gray-100 hover:bg-gray-200 text-gray-900" : "bg-gray-800 hover:bg-gray-700 text-gray-100"}`}
               onClick={() => setSidebarOpen(!sidebarOpen)}>
               {sidebarOpen ? <LuX size={20} /> : <LuMenu size={20} />}
             </button>
@@ -54,11 +61,11 @@ export default function ComponentsPage() {
               px-4 lg:px-6 py-8
               transform transition-transform duration-300 ease-in-out
               ${sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-              ${theme === 'light' ? 'border-r border-gray-200 bg-white' : 'border-r border-gray-800 bg-gray-950'}
+              ${theme === "light" ? "border-r border-gray-200 bg-white" : "border-r border-gray-800 bg-gray-950"}
             `}>
             <div className="lg:hidden flex justify-end mb-4">
               <button
-                className={`p-2 rounded-md ${theme === 'light' ? 'bg-gray-100 hover:bg-gray-200 text-gray-900' : 'bg-gray-800 hover:bg-gray-700 text-gray-100'}`}
+                className={`p-2 rounded-md ${theme === "light" ? "bg-gray-100 hover:bg-gray-200 text-gray-900" : "bg-gray-800 hover:bg-gray-700 text-gray-100"}`}
                 onClick={() => setSidebarOpen(false)}>
                 <LuX size={16} />
               </button>
@@ -74,8 +81,8 @@ export default function ComponentsPage() {
                     ${
                       activeComponent === item
                         ? "font-bold text-white bg-blue-500/60"
-                        : theme === 'light' 
-                          ? "text-gray-600 bg-gray-100 hover:bg-gray-200 hover:text-gray-900" 
+                        : theme === "light"
+                          ? "text-gray-600 bg-gray-100 hover:bg-gray-200 hover:text-gray-900"
                           : "text-gray-400 bg-gray-500/10 hover:bg-gray-500/20 hover:text-white"
                     }
                   `}>
@@ -96,10 +103,18 @@ export default function ComponentsPage() {
             {activeComponent === "Button" && <ButtonComponent />}
             {activeComponent === "Badge" && <BadgeComponent />}
             {activeComponent === "Card" && <CardComponent />}
+            {activeComponent === "Modal" && <ModalComponent />}
+            {activeComponent === "Tooltip" && <TooltipComponent />}
             {activeComponent === "Introduction" && (
               <div>
-                <h3 className={`text-2xl font-bold mb-4 ${theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>Introduction</h3>
-                <p className={theme === 'light' ? 'text-gray-600' : 'text-gray-400'}>
+                <h3
+                  className={`text-2xl font-bold mb-4 ${theme === "light" ? "text-gray-900" : "text-gray-100"}`}>
+                  Introduction
+                </h3>
+                <p
+                  className={
+                    theme === "light" ? "text-gray-600" : "text-gray-400"
+                  }>
                   Welcome to Rebox UI components. Choose a component from the
                   sidebar to get started.
                 </p>
@@ -107,8 +122,14 @@ export default function ComponentsPage() {
             )}
             {activeComponent === "Getting Started" && (
               <div>
-                <h3 className={`text-2xl font-bold mb-4 ${theme === 'light' ? 'text-gray-900' : 'text-gray-100'}`}>Getting Started</h3>
-                <p className={theme === 'light' ? 'text-gray-600' : 'text-gray-400'}>
+                <h3
+                  className={`text-2xl font-bold mb-4 ${theme === "light" ? "text-gray-900" : "text-gray-100"}`}>
+                  Getting Started
+                </h3>
+                <p
+                  className={
+                    theme === "light" ? "text-gray-600" : "text-gray-400"
+                  }>
                   Learn how to use Rebox components in your project.
                 </p>
               </div>
