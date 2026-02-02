@@ -21,6 +21,14 @@
   transition: all 0.256s ease-in-out;
 }
 
+.shiki {
+  padding: 1.25rem !important;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 nav {
   a {
     @apply no-underline text-slate-300 hover:text-slate-100 font-bold;

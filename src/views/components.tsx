@@ -6,9 +6,9 @@ import CardComponent from "./content/cardComponent";
 import { useTheme } from "@/context/useTheme";
 import ModalComponent from "./content/modalComponent";
 import TooltipComponent from "./content/tooltipComponent";
+import GettingStarted from "./content/gettingStarted";
 
 const sidebarItems = [
-  "Introduction",
   "Getting Started",
   "Button",
   "Badge",
@@ -19,10 +19,9 @@ const sidebarItems = [
 
 export default function ComponentsPage() {
   const [activeComponent, setActiveComponent] =
-    useState<string>("Introduction");
+    useState<string>("Getting Started");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { theme } = useTheme();
-
   const handleItemClick = (item: string) => {
     setActiveComponent(item);
     setSidebarOpen(false);
@@ -105,34 +104,8 @@ export default function ComponentsPage() {
             {activeComponent === "Card" && <CardComponent />}
             {activeComponent === "Modal" && <ModalComponent />}
             {activeComponent === "Tooltip" && <TooltipComponent />}
-            {activeComponent === "Introduction" && (
-              <div>
-                <h3
-                  className={`text-2xl font-bold mb-4 ${theme === "light" ? "text-gray-900" : "text-gray-100"}`}>
-                  Introduction
-                </h3>
-                <p
-                  className={
-                    theme === "light" ? "text-gray-600" : "text-gray-400"
-                  }>
-                  Welcome to Rebox UI components. Choose a component from the
-                  sidebar to get started.
-                </p>
-              </div>
-            )}
             {activeComponent === "Getting Started" && (
-              <div>
-                <h3
-                  className={`text-2xl font-bold mb-4 ${theme === "light" ? "text-gray-900" : "text-gray-100"}`}>
-                  Getting Started
-                </h3>
-                <p
-                  className={
-                    theme === "light" ? "text-gray-600" : "text-gray-400"
-                  }>
-                  Learn how to use Rebox components in your project.
-                </p>
-              </div>
+              <GettingStarted theme={theme} />
             )}
           </section>
         </section>
