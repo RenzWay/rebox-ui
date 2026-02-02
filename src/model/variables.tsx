@@ -197,10 +197,10 @@ import Modal from './components/ui/Modal';
 function App() {
   return (
     <div className="p-6">
-      <Card className="max-w-md">
+      <Card>
         <h2>Welcome to Rebox</h2>
         <p>Beautiful, accessible components for React.</p>
-        <Button variant="primary" size="lg">
+        <Button variant="primary">
           Get Started
         </Button>
       </Card>
