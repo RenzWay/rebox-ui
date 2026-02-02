@@ -196,7 +196,7 @@ import Modal from './components/ui/Modal';
 
 function App() {
   return (
-    <div className="p-6">
+    <div>
       <Card>
         <h2>Welcome to Rebox</h2>
         <p>Beautiful, accessible components for React.</p>
