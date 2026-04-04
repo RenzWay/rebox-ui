@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LuComponent, LuMenu, LuX } from "react-icons/lu";
 import { ButtonComponent } from "./content/buttonComponent";
 import BadgeComponent from "./content/badgeComponent";
@@ -7,6 +7,7 @@ import { useTheme } from "@/context/useTheme";
 import ModalComponent from "./content/modalComponent";
 import TooltipComponent from "./content/tooltipComponent";
 import GettingStarted from "./content/gettingStarted";
+import { MenuComponent } from "./content/menuComponent";
 
 const sidebarItems = [
   "Getting Started",
@@ -15,13 +16,23 @@ const sidebarItems = [
   "Card",
   "Modal",
   "Tooltip",
+  "Menu",
 ];
 
 export default function ComponentsPage() {
   const [activeComponent, setActiveComponent] =
     useState<string>("Getting Started");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const { theme } = useTheme();
+  useEffect(() => {
+    const originalTitle = document.title;
+    document.title = `${activeComponent} - reboxui`;
+    return () => {
+      document.title = originalTitle;
+    };
+  }, [activeComponent]);
+
   const handleItemClick = (item: string) => {
     setActiveComponent(item);
     setSidebarOpen(false);
@@ -99,6 +110,7 @@ export default function ComponentsPage() {
           )}
 
           <section className="flex-1 px-4 sm:px-6 lg:px-10 py-8 w-full lg:w-auto">
+            {activeComponent === "Menu" && <MenuComponent />}
             {activeComponent === "Button" && <ButtonComponent />}
             {activeComponent === "Badge" && <BadgeComponent />}
             {activeComponent === "Card" && <CardComponent />}

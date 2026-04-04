@@ -273,6 +273,6 @@ export const buttonComponentsCode: CodeTabsProps[] = [
   }
 }`,
       },
-    ],  
+    ],
   },
 ];

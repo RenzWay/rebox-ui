@@ -97,7 +97,7 @@
   max-width: 26rem;
   max-height: 85vh;
 
-  padding: 1.5rem;  
+  padding: 1.5rem;
 
   background: var(--modal-bg-dark);
   backdrop-filter: blur(20px) saturate(160%);
@@ -115,7 +115,6 @@
 
   animation: modal-in 0.18s ease-out forwards;
 }
-
 
 .modal-overlay {
   position: fixed;
@@ -152,4 +151,64 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
+}
+
+/* Menu popup */
+
+/* MenuPopup.css */
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+}
+
+.menu-content {
+  position: absolute;
+  padding: 5px 0;
+  background: rgba(var(--green-600-rgb), 0.3);
+  backdrop-filter: blur(5px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  min-width: 120px;
+  margin-top: 5px;
+}
+
+.menu-pos-bottom {
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+}
+.menu-pos-top {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 8px;
+}
+.menu-pos-left {
+  right: 100%;
+  top: 0;
+  margin-right: 8px;
+}
+.menu-pos-right {
+  left: 100%;
+  top: 0;
+  margin-left: 8px;
+}
+
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.menu-item:hover {
+  background: rgba(var(--blue-100-rgb), 0.8);
 }

@@ -2,25 +2,25 @@
   /* =========================
      LIGHT THEME COLORS
      ========================= */
-  
+
   /* Backgrounds */
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --bg-tertiary: #f1f5f9;
   --bg-card: #ffffff;
   --bg-overlay: rgba(0, 0, 0, 0.1);
-  
+
   /* Text Colors */
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-tertiary: #64748b;
   --text-muted: #94a3b8;
-  --text-white:#ffffff;
-  
+  --text-white: #ffffff;
+
   /* Borders */
   --border-primary: #e2e8f0;
   --border-secondary: #cbd5e1;
-  
+
   /* =========================
      NEUTRAL (IMPORTANT)
      ========================= */
@@ -35,117 +35,183 @@
   --slate-300: #cbd5e1;
   --slate-200: #e2e8f0;
   --slate-100: #f1f5f9;
-  --slate-50:  #f8fafc;
+  --slate-50: #f8fafc;
 
   /* =========================
      BLUE (PRIMARY)
      ========================= */
 
-  --blue-950:#172554;
-  --blue-900:#1e3a8a;
-  --blue-800:#1e40af;
-  --blue-700:#1d4ed8;
-  --blue-600:#2563eb;
-  --blue-500:#3b82f6;
-  --blue-400:#60a5fa;
-  --blue-300:#93c5fd;
-  --blue-200:#bfdbfe;
-  --blue-100:#dbeafe;
+  --blue-950: #172554;
+  --blue-950-rgb: 23, 37, 84;
+  --blue-900: #1e3a8a;
+  --blue-900-rgb: 30, 58, 138;
+  --blue-800: #1e40af;
+  --blue-800-rgb: 30, 64, 175;
+  --blue-700: #1d4ed8;
+  --blue-700-rgb: 29, 78, 216;
+  --blue-600: #2563eb;
+  --blue-600-rgb: 37, 99, 235;
+  --blue-500: #3b82f6;
+  --blue-500-rgb: 59, 130, 246;
+  --blue-400: #60a5fa;
+  --blue-400-rgb: 96, 165, 250;
+  --blue-300: #93c5fd;
+  --blue-300-rgb: 147, 197, 253;
+  --blue-200: #bfdbfe;
+  --blue-200-rgb: 191, 219, 254;
+  --blue-100: #dbeafe;
+  --blue-100-rgb: 219, 234, 254;
   --blue-50: #eff6ff;
+  --blue-50-rgb: 239, 245, 255;
 
   /* =========================
      SKY (ACCENT / LINK / GLOW)
      ========================= */
 
-  --sky-950:#082f49;
-  --sky-900:#0c4a6e;
-  --sky-800:#075985;
-  --sky-700:#0369a1;
-  --sky-600:#0284c7;
-  --sky-500:#0ea5e9;
-  --sky-400:#38bdf8;
-  --sky-300:#7dd3fc;
-  --sky-200:#bae6fd;
-  --sky-100:#e0f2fe;
+  --sky-950: #082f49;
+  --sky-950-rgb: 8, 47, 73;
+  --sky-900: #0c4a6e;
+  --sky-900-rgb: 12, 74, 110;
+  --sky-800: #075985;
+  --sky-800-rgb: 7, 89, 133;
+  --sky-700: #0369a1;
+  --sky-700-rgb: 3, 105, 161;
+  --sky-600: #0284c7;
+  --sky-600-rgb: 2, 132, 199;
+  --sky-500: #0ea5e9;
+  --sky-500-rgb: 14, 165, 233;
+  --sky-400: #38bdf8;
+  --sky-400-rgb: 56, 189, 248;
+  --sky-300: #7dd3fc;
+  --sky-300-rgb: 125, 211, 252;
+  --sky-200: #bae6fd;
+  --sky-200-rgb: 186, 230, 253;
+  --sky-100: #e0f2fe;
+  --sky-100-rgb: 224, 242, 254;
   --sky-50: #f0f9ff;
+  --sky-50-rgb: 240, 249, 255;
 
   /* =========================
      GREEN (SUCCESS)
      ========================= */
 
-  --green-950:#052e16;
-  --green-900:#14532d;
-  --green-800:#166534;
-  --green-700:#15803d;
-  --green-600:#16a34a;
-  --green-500:#22c55e;
-  --green-400:#4ade80;
-  --green-300:#86efac;
-  --green-200:#bbf7d0;
-  --green-100:#dcfce7;
+  --green-950: #052e16;
+  --green-950-rgb: 5, 46, 22;
+  --green-900: #14532d;
+  --green-900-rgb: 20, 83, 45;
+  --green-800: #166534;
+  --green-800-rgb: 22, 101, 52;
+  --green-700: #15803d;
+  --green-700-rgb: 21, 128, 61;
+  --green-600: #16a34a;
+  --green-600-rgb: 22, 163, 74;
+  --green-500: #22c55e;
+  --green-500-rgb: 34, 197, 94;
+  --green-400: #4ade80;
+  --green-400-rgb: 74, 222, 128;
+  --green-300: #86efac;
+  --green-300-rgb: 134, 239, 172;
+  --green-200: #bbf7d0;
+  --green-200-rgb: 187, 247, 208;
+  --green-100: #dcfce7;
+  --green-100-rgb: 220, 252, 231;
   --green-50: #f0fdf4;
+  --green-50-rgb: 240, 253, 244;
 
   /* =========================
      RED (DANGER)
      ========================= */
 
-  --red-950:#450a0a;
-  --red-900:#7f1d1d;
-  --red-800:#991b1b;
-  --red-700:#b91c1c;
-  --red-600:#dc2626;
-  --red-500:#ef4444;
-  --red-400:#f87171;
-  --red-300:#fca5a5;
-  --red-200:#fecaca;
-  --red-100:#fee2e2;
+  --red-950: #450a0a;
+  --red-950-rgb: 69, 10, 10;
+  --red-900: #7f1d1d;
+  --red-900-rgb: 127, 29, 29;
+  --red-800: #991b1b;
+  --red-800-rgb: 153, 27, 27;
+  --red-700: #b91c1c;
+  --red-700-rgb: 185, 28, 28;
+  --red-600: #dc2626;
+  --red-600-rgb: 220, 38, 38;
+  --red-500: #ef4444;
+  --red-500-rgb: 239, 68, 68;
+  --red-400: #f87171;
+  --red-400-rgb: 248, 113, 113;
+  --red-300: #fca5a5;
+  --red-300-rgb: 252, 165, 165;
+  --red-200: #fecaca;
+  --red-200-rgb: 254, 202, 202;
+  --red-100: #fee2e2;
+  --red-100-rgb: 254, 226, 226;
   --red-50: #fef2f2;
+  --red-50-rgb: 254, 242, 242;
 
   /* =========================
      YELLOW (WARNING)
      ========================= */
 
-  --yellow-950:#422006;
-  --yellow-900:#713f12;
-  --yellow-800:#854d0e;
-  --yellow-700:#a16207;
-  --yellow-600:#ca8a04;
-  --yellow-500:#eab308;
-  --yellow-400:#facc15;
-  --yellow-300:#fde047;
-  --yellow-200:#fef08a;
-  --yellow-100:#fef9c3;
+  --yellow-950: #422006;
+  --yellow-950-rgb: 66, 32, 6;
+  --yellow-900: #713f12;
+  --yellow-900-rgb: 113, 63, 18;
+  --yellow-800: #854d0e;
+  --yellow-800-rgb: 133, 77, 14;
+  --yellow-700: #a16207;
+  --yellow-700-rgb: 161, 98, 7;
+  --yellow-600: #ca8a04;
+  --yellow-600-rgb: 202, 138, 4;
+  --yellow-500: #eab308;
+  --yellow-500-rgb: 234, 179, 8;
+  --yellow-400: #facc15;
+  --yellow-400-rgb: 250, 204, 21;
+  --yellow-300: #fde047;
+  --yellow-300-rgb: 253, 224, 71;
+  --yellow-200: #fef08a;
+  --yellow-200-rgb: 254, 240, 138;
+  --yellow-100: #fef9c3;
+  --yellow-100-rgb: 254, 249, 195;
   --yellow-50: #fefce8;
+  --yellow-50-rgb: 254, 252, 232;
 
   /* =========================
      GRAY
      ========================= */
 
   --gray-950: #030712;
+  --gray-950-rgb: 3, 7, 18;
   --gray-900: #111827;
+  --gray-900-rgb: 17, 24, 39;
   --gray-800: #1f2937;
+  --gray-800-rgb: 31, 41, 55;
   --gray-700: #374151;
+  --gray-700-rgb: 55, 65, 81;
   --gray-600: #4b5563;
+  --gray-600-rgb: 75, 85, 99;
   --gray-500: #6b7280;
+  --gray-500-rgb: 107, 114, 128;
   --gray-400: #9ca3af;
+  --gray-400-rgb: 156, 163, 175;
   --gray-300: #d1d5db;
+  --gray-300-rgb: 209, 213, 219;
   --gray-200: #e5e7eb;
+  --gray-200-rgb: 229, 231, 235;
   --gray-100: #f3f4f6;
+  --gray-100-rgb: 243, 244, 246;
   --gray-50: #f9fafb;
+  --gray-50-rgb: 249, 250, 251;
 
   /* =========================
      MODAL SPECIFIC COLORS
      ========================= */
 
   /* Modal background - dark glass effect */
-  --modal-bg-dark: rgba(30, 30, 30, 0.50);
-  
+  --modal-bg-dark: rgba(30, 30, 30, 0.5);
+
   /* Modal border - subtle light border */
   --modal-border-dark: rgba(255, 255, 255, 0.08);
-  
+
   /* Modal text - light gray for readability */
   --modal-text-light: #f5f5f5;
-  
+
   /* Modal overlay - semi-transparent black */
   --modal-overlay: rgba(0, 0, 0, 0.35);
 }
@@ -159,12 +225,12 @@
   --bg-tertiary: #334155;
   --bg-card: #1e293b;
   --bg-overlay: rgba(255, 255, 255, 0.1);
-  
+
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-tertiary: #94a3b8;
   --text-muted: #64748b;
-  
+
   --border-primary: #334155;
   --border-secondary: #475569;
 }
@@ -178,12 +244,12 @@
   --bg-tertiary: #f1f5f9;
   --bg-card: #ffffff;
   --bg-overlay: rgba(0, 0, 0, 0.1);
-  
+
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-tertiary: #64748b;
   --text-muted: #94a3b8;
-  
+
   --border-primary: #e2e8f0;
   --border-secondary: #cbd5e1;
 }
